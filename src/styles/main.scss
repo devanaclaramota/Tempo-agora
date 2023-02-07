@@ -1,0 +1,89 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    height: 700px;
+    background-image: linear-gradient(to bottom, #fff, blue);
+    .title{
+        text-align: center;
+        padding: 30px;
+        font-size: 3em;
+    }
+    .search{
+        background-color: #fff;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+        padding: 30px;              
+        width: 320px;
+        margin: auto;
+        .cidade-input{
+            padding: 8px;
+            border-radius: 5px;
+            border: 1px solid gray;
+            font-size: 1em;
+        }
+        .btn{
+            background-color: white;
+            padding: 8px;
+            border-radius: 5px;
+            border: 1px solid gray;
+            cursor: pointer;
+            i{
+                font-size: 1.2em;
+            }
+        }
+        span{
+            display: block;
+            text-align: center;
+            padding-top: 16px;
+        }
+    }
+    .results{
+        width: 320px;
+        margin: auto;
+        border-bottom-left-radius:10px ;
+        border-bottom-right-radius: 10px;
+        background-image: linear-gradient(to bottom, #ffff, rgb(255, 238, 0));
+        .local{
+            padding: 24px;
+            margin: auto;
+            font-size: 2em;
+            text-align: center;
+            .name,.country{
+                
+                color: rgb(59, 59, 59);
+            }
+            
+            
+        }
+        .temperature{
+            margin: 24px;
+            .temp-itens{
+                .temp{
+                    text-align: center;
+                    font-size: 3em;
+                    display: block;
+                }
+                .description{
+                    display: block;
+                    width: 100%;
+                    text-align: center;
+                    font-size: 1.5em;
+                }
+            }
+            .min-max{
+                display: block;
+                font-size: 1em;
+                margin: 18px;
+            }
+        }
+        .details{
+            display: block;
+            padding: 18px;
+            text-align: center;
+        }
+    }
+}

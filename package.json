@@ -1,0 +1,26 @@
+{
+  "name": "tempo-agora",
+  "version": "1.0.0",
+  "description": "Projeto de previsão do tempo, usando requisições de api externas, icones, interações de acordo com o clima.",
+  
+  "scripts": {
+    "build": "parcel build  src/index.html",
+    "dev": "parcel src/index.html src/styles/main.scss src/js/main.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devanaclaramota/Tempo-agora.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/devanaclaramota/Tempo-agora/issues"
+  },
+  "homepage": "https://github.com/devanaclaramota/Tempo-agora#readme",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.8.3",
+    "parcel": "^2.8.3"
+  }
+}
