@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Requesições ajax </title>
+</head>
+<body>
+    <h1>Previsão do tempo</h1>
+    <input class="cidade" type="text" placeholder="Digite o cidade">
+    
+    <button id="btn">Buscar</button>
+    <div class="resposta">
+        aqui entra a resposta
+    </div>
+  
+    
+    <script>
+        
+        const btn = document.querySelector('#btn')
+        btn.addEventListener('click', function (e){
+            e.preventDefault();
+
+            let apiKey = '0bd102575ffe8913e5d6e09c7f6bcb9c';
+
+            let cidade= document.querySelector('.cidade').value;
+            let resposta = document.querySelector('.resposta');
+            let urlApi = `https://api.openweathermap.org/data/2.5/weather?q=${cidade}&units=metric&appid=${apiKey}&lang=pt_br`
+
+            resposta.innerHTML = `Previsão do tempo em ${cidade}`;
+            
+            fecth(urlApi)
+            .then(function(response){
+                return response.json();
+            })
+            .then(function(json){
+                
+            })
+        })
+
+       
+        
+    </script>
+</body>
+</html>
