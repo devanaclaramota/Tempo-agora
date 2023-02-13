@@ -8,8 +8,6 @@ btn.addEventListener('click', function(e){
     let temp = document.querySelector('.temp');
     let min = document.querySelector('.min');
     let max = document.querySelector('.max');
-
-   // let country = document.querySelector('.country');
    let wind = document.querySelector('.wind');
     let humid = document.querySelector('.humidity');
     let description = document.querySelector('.description')
@@ -32,10 +30,9 @@ btn.addEventListener('click', function(e){
         return resposta.json();
 
     }).then(function(json){
+
         name.innerHTML = `<i class="bi bi-geo-alt"></i> ${json.name}`
-        //aqui entra o inner country 
         temp.innerHTML = ` <i class="bi bi-thermometer-sun"></i> ${json.main.temp}`;
-       
         description.innerHTML = json.weather[0].description;
         min.innerHTML = `    Mínima: ${json.main.temp_min} |`;
         max.innerHTML = `    Máxima: ${json.main.temp_max}`;
@@ -43,7 +40,6 @@ btn.addEventListener('click', function(e){
         humid.innerHTML = ` | Umidade: <i class="bi bi-droplet-half"></i> ${json.main.humidity}`;
 
         let controlBackColor = json.main.temp
-        console.log(controlBackColor)
 
         if( controlBackColor < 10){
             background.style.backgroundImage = 'linear-gradient(to bottom, #ffff, #cccc)'
